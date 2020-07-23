@@ -1,0 +1,34 @@
+     body {
+         width: 100%;
+         height: 100%;
+         background-color: rgb(241, 241, 241);
+         font-family: 'Open Sans', sans-serif;
+         font-size: 1.3rem;
+         text-align: center;
+     }
+    blockquote {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    p {
+        font-weight: bold;
+        padding: 2rem;
+        color : rgb(56, 56, 56);
+        max-width: 35rem;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 40vh;
+        height: 40vh;
+        border: 5px rgb(136, 136, 136) solid;
+    }
+
+    .author {
+        color : rgb(78, 78, 78);
+    }
+
+   
