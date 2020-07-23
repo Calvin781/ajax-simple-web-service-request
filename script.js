@@ -1,9 +1,7 @@
 let target = document.getElementById('quote');
-
 getQuotes();
 
 async function getQuotes() {
-
     {
         let quotesPromise = await fetch('https://thatsthespir.it/api');
         let quotes = await quotesPromise.json();
@@ -16,15 +14,16 @@ async function getQuotes() {
                 quoteText.querySelector(".img").src = quotes.photo;
             }
             else {
-                quoteText.querySelector(".img").src = "https://lh3.googleusercontent.com/proxy/iqtiD4HhefhPnwtrIHyuuswv9_5csAkq9mrJnBockltWsVLCEGeQyO1XTsMMri1yO_bOA4VWlpPJw6jkyjYM67y_osaoh3UF5DJ_aZsunw"
+                quoteText.querySelector(".img").src = "img/inconnu.jpg"
             }
             quoteText.querySelector(".author").textContent = ` - ${quotes.author}`;
             target.appendChild(quoteText);
             document.querySelector(".img").onerror = function () {
-                target.querySelector(".img").src = "https://lh3.googleusercontent.com/proxy/iqtiD4HhefhPnwtrIHyuuswv9_5csAkq9mrJnBockltWsVLCEGeQyO1XTsMMri1yO_bOA4VWlpPJw6jkyjYM67y_osaoh3UF5DJ_aZsunw"
+                target.querySelector(".img").src = "img/inconnu.jpg"
             };
         } catch (error) {
             console.log(error);
         }
     }
 }
+
